@@ -3,7 +3,7 @@
 
 namespace Statistics {
     
-    template <typenameT>
+    template <typename T>
     class Stats
     {
         public:
