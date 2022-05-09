@@ -16,7 +16,7 @@ namespace Statistics {
     class IAlerter
     {
         public:
-        void SetAlert(bool value) = 0;
+        virtual void SetAlert(bool value) = 0;
     };
     
     class EmailAlert: public IAlerter
@@ -48,7 +48,7 @@ namespace Statistics {
         std::vector<IAlerter*> notifiers;
         public:
         StatsAlerter(float limit, std::vector<IAlerter*>& values):maxLimit(limit),notifiers(values){}
-        checkAndAlert(const std::vector<float>& values)
+        void checkAndAlert(const std::vector<float>& values)
         {
             float max = 0.0;
             bool alert = false;
