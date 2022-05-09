@@ -14,7 +14,7 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& values ) {
         }
         if (*itr < min)
         {
-            min = *itr
+            min = *itr;
         }
     }
     Stats data;
