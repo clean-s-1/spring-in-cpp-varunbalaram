@@ -1,4 +1,5 @@
 #include "stats.h"
+using namespace Statistics;
 
 Stats Statistics::ComputeStatistics(const std::vector<float>& values ) {
     float sum = 0.0;
