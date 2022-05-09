@@ -4,10 +4,11 @@ using namespace Statistics;
 Stats Statistics::ComputeStatistics(const std::vector<double>& values ) {
     double sum = 0;
     double max = 0;
-    double min = 0;
+    double min;
     Stats data;
     if(!values.empty())
     {
+        min = values[0];
         for (auto itr = values.begin(); itr != values.end(); itr++)
         {
             sum += *itr;
