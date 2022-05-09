@@ -69,7 +69,7 @@ namespace Statistics {
                 for (auto itr = notifiers.begin(); itr != notifiers.end(); itr++)
                 {
                     IAlerter* temp = *itr;
-                    itr->SetAlert(alert);
+                    temp->SetAlert(alert);
                 }
                 
             }
