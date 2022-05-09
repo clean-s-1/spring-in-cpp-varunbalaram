@@ -2,16 +2,18 @@
 #include <math.h>
 
 namespace Statistics {
+    
+    template <typenameT>
     class Stats
     {
         public:
         Stats():average(NAN),max(NAN),min(NAN){}
-        float average;
-        float max;
-        float min;
+        T average;
+        T max;
+        T min;
     };
     
-    Stats ComputeStatistics(const std::vector<float>& );
+    Stats ComputeStatistics(const std::vector<T>& );
     
     class IAlerter
     {
