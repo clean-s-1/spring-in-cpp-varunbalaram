@@ -1,11 +1,11 @@
 #include "stats.h"
 using namespace Statistics;
 
-Stats Statistics::ComputeStatistics(const std::vector<float>& values ) {
-    float sum = 0.0;
-    float max = 0.0;
-    float min = 0.0;
-    Stats data;
+Stats Statistics::ComputeStatistics(const std::vector<T>& values ) {
+    T sum = 0;
+    T max = 0;
+    T min = 0;
+    Stats<T> data;
     if(!values.empty())
     {
         for (auto itr = values.begin(); itr != values.end(); itr++)
