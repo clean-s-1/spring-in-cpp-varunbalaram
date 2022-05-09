@@ -7,17 +7,14 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& values ) {
     float min = 0.0;
     for (auto itr = values.begin(); itr != values.end(); itr++)
     {
-        if (nullptr != itr)
+        sum += *itr;
+        if (*itr > max)
         {
-            sum += *itr;
-            if (*itr > max)
-            {
-                max = *itr;
-            }
-            if (*itr < min)
-            {
-                min = *itr
-            }
+            max = *itr;
+        }
+        if (*itr < min)
+        {
+            min = *itr
         }
     }
     Stats data;
